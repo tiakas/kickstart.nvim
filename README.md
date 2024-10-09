@@ -203,7 +203,7 @@ sudo apt install make gcc ripgrep unzip git xclip neovim
 <details><summary>Debian Install Steps</summary>
 
 ```
-sudo apt update
+sudo apt update£
 sudo apt install make gcc ripgrep unzip git xclip curl
 
 # Now we install nvim
@@ -230,4 +230,17 @@ sudo dnf install -y gcc make git ripgrep fd-find unzip neovim
 sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
 ```
 </details>
+
+
+### Update repo
+In order to fetch latest changes from forked repository we have to:
+Aldd the original repository as a remote
+```
+git remote add upstream git@github.com:nvim-lua/kickstart.nvim.git
+```
+and then
+```
+git fetch upstream
+git rebase upstream/master
+```
 
